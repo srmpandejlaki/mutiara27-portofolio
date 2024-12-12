@@ -1,0 +1,1 @@
+Ini adalah Repository Portofolio pertama, jadi banyak hal yang ingin saya explore untuk membangun portofolio yang bisa menarik perhatian orang lain agar tertarik untuk mempekerjakan saya sebagai software engineer
