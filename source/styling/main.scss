@@ -1,3 +1,6 @@
+$background-color-1: #1F202D;
+$font-color: #F0BC5A;
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +12,10 @@
   max-height: 3rem;
   width: 100%;
   padding-inline: 1rem;
-  background-color: chocolate;
+  background-color: $background-color-1;
   position: fixed;
+
+  color: white;
 }
 
 .logo {
@@ -24,7 +29,7 @@
 }
 
 .logo span {
-  color: white;
+  color: $font-color;
 }
 
 .navbar-list {
@@ -41,6 +46,7 @@
   gap: 1rem;
 
   list-style: none;
+  color: $font-color;
 }
 
 .container {
@@ -51,10 +57,11 @@
 
 .footer {
   max-height: 3.5rem;
-  background-color: chocolate;
+  background-color: $background-color-1;
 }
 
 .footer p {
+  color: $font-color;
   text-align: center;
   padding: 0.8rem;
 }
@@ -74,7 +81,7 @@
   }
 
   .navbar-list ul {
-    background-color: chocolate;
+    background-color: $background-color-1;
     padding-inline: 5rem;
     height: 3rem;
     flex-direction: row;
