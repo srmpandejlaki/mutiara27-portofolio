@@ -20,33 +20,47 @@ $font-color: #F0BC5A;
 
 .logo {
   height: 3rem;
+  width: 6.5rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-}
+  justify-content: center;
+  gap: 0.015rem;
 
-.logo p {
-  font-size: 1.4rem;
-}
+  p {
+    font-size: 1.4rem;
+  }
 
-.logo span {
-  color: $font-color;
+  span {
+    color: $font-color;
+  }
+
+  .descLogo {
+    font-size: 0.5rem;
+  }
 }
 
 .navbar-list {
   width: 100%;
   background-color: lavender;
   
-}
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 
-.navbar-list ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+    list-style: none;
+    color: $font-color;
 
-  list-style: none;
-  color: $font-color;
+    li {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .container {
@@ -58,12 +72,12 @@ $font-color: #F0BC5A;
 .footer {
   max-height: 3.5rem;
   background-color: $background-color-1;
-}
-
-.footer p {
-  color: $font-color;
-  text-align: center;
-  padding: 0.8rem;
+  
+  p {
+    color: $font-color;
+    text-align: center;
+    padding: 0.8rem;
+  }
 }
 
 /* RESPONSIVE */
