@@ -66,7 +66,7 @@ $font-color: #F0BC5A;
 
 .container {
   padding: 3rem 1rem;
-  height: 95vh;
+  min-height: 95vh;
   background-color: $background-color-2;
 
   section {
@@ -90,18 +90,38 @@ $font-color: #F0BC5A;
   }
 }
 
-/* MESSAGE - SECTION */
+/* ABOUT ME */ 
+.aboutMe-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  img {
+    width: 120px;
+    border-radius: 50%;
+  }
+
+  a {
+    color: white;
+    font-size: 1.2rem;
+  }
+}
+
+/* MESSAGE */
 .boxMessage {
+  max-width: 500px;
   padding: 1rem;
   background-color: white;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  justify-self: center;
   gap: 1rem;
 
   i {
     color: $font-color;
-    width: 200px;
+    font-size: 1.5rem;
   }
 
   .littleMessage {
