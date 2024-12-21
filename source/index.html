@@ -12,29 +12,16 @@
 </head>
 <body>
     <header>
-        <div class="header">
-            <div class="logo">
-                <p>Mu<span>Di</span>.io</p>
-                <p class="descLogo">Mutiara Digital Portofolio</p>
-            </div>
-            <nav class="navbar-list">
-                <!-- <p>Menu</p> -->
-                <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Journey</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </nav>
-        </div>
+        <header-bar></header-bar>
     </header>
 
     <main>
-        <div class="container">
+        <div id="home" class="container">
             <section class="hero-section">
                 <h1>KONICHIWA</h1>
+                <button><a href="#/aboutSection">Track the Owner</a></button>
             </section>
-            <section class="aboutMe-section">
+            <section id="aboutSection" class="aboutMe-section">
                 <h1>ABOUT ME</h1>
                 <div class="profilContainer">
                     <div class="profil">
@@ -46,9 +33,9 @@
                 <div class="iconConnection">
                     <p>Ayo Terhubung</p>
                     <div class="icon">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-github"></i>
-                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.linkedin.com/in/sesilia-pandejlaki/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/srmpandejlaki"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/mutiarapandejlaki27/?hl=en"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
             </section>
@@ -72,9 +59,7 @@
     </main>
 
     <footer>
-        <div class="footer">
-            <p>copyright Mutii</p>
-        </div>
+        <footer-bar></footer-bar>
     </footer>
 </body>
 </html>

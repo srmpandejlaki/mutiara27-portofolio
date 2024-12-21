@@ -81,6 +81,11 @@ $font-color: #F0BC5A;
   }
 }
 
+i {
+  cursor: pointer;
+  color: white;
+}
+
 .footer {
   max-height: 3.5rem;
   background-color: $background-color-1;
