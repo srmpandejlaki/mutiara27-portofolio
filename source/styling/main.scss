@@ -147,25 +147,27 @@ a {
 /* ABOUT ME */ 
 .aboutMe-section {
   padding: 3rem 1rem;
+}
 
+.profilContainer {
   .profil {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     padding-bottom: 1rem;
-
+  
     img {
       width: 120px;
       border-radius: 50%;
     }
-  
+    
     a {
       color: white;
       font-size: 1.2rem;
     }
   }
-
+  
   .desc {
     color: white;
     font-size: 1rem;
@@ -175,8 +177,8 @@ a {
 .iconConnection {
   padding-top: 3rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
-  align-self: flex-start;
   color: white;
 
   .icon {
@@ -239,6 +241,28 @@ a {
     flex-direction: row;
     gap: 1rem;
   }
+  
+  .heroDesc {
+    height: 95vh;
+    justify-content: center;
+    
+    h3 {
+      padding: 0 8rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    button {
+      margin-inline: 4rem;
+    }
+  }
+
+  .profilContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -263,17 +287,34 @@ a {
   }
 
   .heroDesc {
-    height: 100vh;
-    justify-content: center;
-    
     h3 {
       padding: 0 10rem;
-      text-align: center;
-      font-size: 2rem;
+    }
+  }
+
+  .profilContainer {
+    flex-direction: row;
+    align-items: center;
+
+    .profil {
+      width: 100%;
+
+      img {
+        width: 150px;
+      }
+      
+      a {
+        font-size: 1.5rem;
+      }
     }
 
-    button {
-      margin-inline: 4rem;
+    .desc {
+      font-size: 1.2rem;
     }
+  }
+  
+  .iconConnection {
+    gap: 1rem;
+    justify-content: flex-end;
   }
 }
