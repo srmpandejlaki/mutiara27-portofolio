@@ -10,7 +10,7 @@ class HeaderBar extends HTMLElement {
         <p>Mu<span>Di</span>.io</p>
         <p class="descLogo">Mutiara Digital Portofolio</p>
       </div>
-      <nav class="navbar-list">
+      <nav id="navbar-list" class="navbar-list">
         <ul>
           <li><a href="#/home">Dashboard</a></li>
           <li><a href="#/about-me">About Me</a></li>
@@ -18,6 +18,7 @@ class HeaderBar extends HTMLElement {
           <li><a href="#/blog">Blog</a></li>
         </ul>
       </nav>
+      <button class='humbergerMenu' id='humbergerMenu'> <i class='fa-solid fa-bars'></i></button>
     </div>
     `;
   }
