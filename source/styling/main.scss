@@ -27,6 +27,9 @@ $font-color: #F0BC5A;
   section {
     min-height: 95vh;
     padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     
     h1 {
       text-align: center;
@@ -112,6 +115,14 @@ a {
       }
     }
   }
+}
+
+/* HUMBERGER BUTTON */ 
+.humbergerMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: $background-color-1;
 }
 
 /* HERO SECTION */ 
@@ -225,11 +236,11 @@ a {
 
 
 /* RESPONSIVE */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 580px) {
   .navbar-list {
     overflow: hidden;
     position: absolute;
-    right: -500px;
+    right: -600px;
   }
 }
 
@@ -244,6 +255,10 @@ a {
     height: 3rem;
     flex-direction: row;
     gap: 1rem;
+  }
+
+  .humbergerMenu {
+    display: none;
   }
   
   .heroDesc {

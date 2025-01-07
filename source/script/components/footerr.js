@@ -6,7 +6,7 @@ class FooterBar extends HTMLElement {
   render() {
     this.innerHTML = `
     <div class="footer">
-      <p>copyright Mutii</p>
+      <p>&#169 copyright Mutii 2024</p>
     </div>
     `;
   }
