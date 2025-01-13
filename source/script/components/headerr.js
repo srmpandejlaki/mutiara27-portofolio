@@ -18,7 +18,7 @@ class HeaderBar extends HTMLElement {
           <li><a href="#/blog">Blog</a></li>
         </ul>
       </nav>
-      <button class='humbergerMenu' id='humbergerMenu'> <i class='fa-solid fa-bars'></i></button>
+      <button class='humburgerMenu' id='humburgerMenu'> <i class='fa-solid fa-bars'></i></button>
     </div>
     `;
   }

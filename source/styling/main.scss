@@ -78,7 +78,6 @@ a {
   padding-block: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
 
   p {
@@ -96,7 +95,8 @@ a {
 
 .navbar-list {
   width: 100%;
-  background-color: lavender;
+  background-color: $background-color-1;
+  padding-block: 1.5rem;
   
   ul {
     display: flex;
@@ -112,16 +112,21 @@ a {
       a {
         color: white;
         text-decoration: none;
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
 }
 
-/* HUMBERGER BUTTON */ 
-.humbergerMenu {
+/* HUMBURGER BUTTON */ 
+.humburgerMenu {
   position: fixed;
   top: 0;
-  right: 0;
+  right: 5px;
   background-color: $background-color-1;
 }
 
@@ -178,7 +183,7 @@ a {
       font-size: 1.2rem;
     }
 
-    a:hover {
+    &:hover {
       text-decoration: underline;
     }
   }
@@ -241,6 +246,10 @@ a {
     overflow: hidden;
     position: absolute;
     right: -600px;
+  }
+
+  .navbar-list.open {
+    right: 0px;
   }
 }
 
@@ -320,7 +329,7 @@ a {
       width: 100%;
 
       img {
-        width: 150px;
+        width: 180px;
       }
       
       a {
