@@ -43,15 +43,14 @@ const Dashboard = {
   },
 
   async afterRender() {
-    const btnHero = document.querySelector('btn-hero');
+    const btnHero = document.querySelector('#btn-hero');
     const scroll = document.querySelector('#aboutSection');
 
     btnHero.addEventListener('click', () => {
-      if (scroll) {
-        scroll.scrollIntoView({ behavior:'smooth' });
-      } else {
-        console.log('Element not found');
-      }
+      const scrolling = -50;
+      const position = scroll.offsetTop + scrolling;
+
+      window.scrollTo({ top: position, behavior:'smooth' });
     });
   }
 };

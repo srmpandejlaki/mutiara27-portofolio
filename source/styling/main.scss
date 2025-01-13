@@ -21,6 +21,7 @@ $font-color: #F0BC5A;
 }
 
 .container {
+  min-height: 93.2vh;
   padding-top: 3rem;
   background-color: $background-color-2;
 
@@ -96,7 +97,6 @@ a {
 .navbar-list {
   width: 100%;
   background-color: $background-color-1;
-  padding-block: 1.5rem;
   
   ul {
     display: flex;
@@ -112,7 +112,6 @@ a {
       a {
         color: white;
         text-decoration: none;
-        font-size: 1.2rem;
       }
 
       &:hover {
@@ -246,6 +245,12 @@ a {
     overflow: hidden;
     position: absolute;
     right: -600px;
+
+    padding-block: 1.5rem;
+
+    li a {
+      font-size: 1.2rem;
+    }
   }
 
   .navbar-list.open {
