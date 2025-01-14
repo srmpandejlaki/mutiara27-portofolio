@@ -14,7 +14,7 @@ const Dashboard = {
           <div class="profilContainer">
             <div class="profil">
               <img src="ice-bear.jpg" alt="Foto Profil">
-              <p><a href="#">Sesilia Pandejlaki</a></p>
+              <p><a href="#/about-me">Sesilia Pandejlaki</a></p>
             </div>
             <p class="desc">Seorang mahasiswa semester lima yang mendapatkan motivasi untuk terus berkembang dan belajar hal baru demi mencapai cita-citanya karena berhasil masuk ke dunia teknologi khususnya di bidang Web Development.</p>
           </div>
@@ -30,7 +30,7 @@ const Dashboard = {
         </section>
         <section class="projects-section">
           <h1>PROJECTS</h1>
-          <div class="boxProjects">
+          <div class="buildingAlert">
             <img src="iceBear-kapak.jpg" alt="Sedang dalam Pengembangan">
             <p>Sepertinya owner sedang mengembangkan bagian ini</p>
           </div>
