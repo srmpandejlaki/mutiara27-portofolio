@@ -14,7 +14,7 @@ const Dashboard = {
           <div class="profilContainer">
             <div class="profil">
               <img src="ice-bear.jpg" alt="Foto Profil">
-              <p><a href="#">Sesilia Pandejlaki</a></p>
+              <p><a href="#/about-me">Sesilia Pandejlaki</a></p>
             </div>
             <p class="desc">Seorang mahasiswa semester lima yang mendapatkan motivasi untuk terus berkembang dan belajar hal baru demi mencapai cita-citanya karena berhasil masuk ke dunia teknologi khususnya di bidang Web Development.</p>
           </div>
@@ -30,9 +30,9 @@ const Dashboard = {
         </section>
         <section class="projects-section">
           <h1>PROJECTS</h1>
-          <div class="boxProjects">
-            <img src="iceBear-kapak.jpg" alt="Sedang dalam Pengembangan">
-            <p>Sepertinya owner sedang mengembangkan bagian ini</p>
+          <div class="project-items">
+            <img src="Macbook-Air-mamen-mdo.vercel.app.png" alt="Capstone Project MAMEN">
+            <p>MAMEN <br> Manado Micro Enterprises Website</p>
           </div>
         </section>
         <section class="message-section">
@@ -43,15 +43,14 @@ const Dashboard = {
   },
 
   async afterRender() {
-    const btnHero = document.querySelector('btn-hero');
+    const btnHero = document.querySelector('#btn-hero');
     const scroll = document.querySelector('#aboutSection');
 
     btnHero.addEventListener('click', () => {
-      if (scroll) {
-        scroll.scrollIntoView({ behavior:'smooth' });
-      } else {
-        console.log('Element not found');
-      }
+      const scrolling = -50;
+      const position = scroll.offsetTop + scrolling;
+
+      window.scrollTo({ top: position, behavior:'smooth' });
     });
   }
 };

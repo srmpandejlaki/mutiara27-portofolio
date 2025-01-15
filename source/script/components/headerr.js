@@ -12,13 +12,13 @@ class HeaderBar extends HTMLElement {
       </div>
       <nav id="navbar-list" class="navbar-list">
         <ul>
-          <li><a href="#/home">Dashboard</a></li>
+          <li><a href="#/dashboard">Dashboard</a></li>
           <li><a href="#/about-me">About Me</a></li>
           <li><a href="#/journey">Journey</a></li>
           <li><a href="#/blog">Blog</a></li>
         </ul>
       </nav>
-      <button class='humbergerMenu' id='humbergerMenu'> <i class='fa-solid fa-bars'></i></button>
+      <button class='humburgerMenu' id='humburgerMenu'> <i class='fa-solid fa-bars'></i></button>
     </div>
     `;
   }
