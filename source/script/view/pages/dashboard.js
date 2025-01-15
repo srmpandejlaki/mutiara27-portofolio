@@ -30,9 +30,9 @@ const Dashboard = {
         </section>
         <section class="projects-section">
           <h1>PROJECTS</h1>
-          <div class="buildingAlert">
-            <img src="iceBear-kapak.jpg" alt="Sedang dalam Pengembangan">
-            <p>Sepertinya owner sedang mengembangkan bagian ini</p>
+          <div class="project-items">
+            <img src="Macbook-Air-mamen-mdo.vercel.app.png" alt="Capstone Project MAMEN">
+            <p>MAMEN <br> Manado Micro Enterprises Website</p>
           </div>
         </section>
         <section class="message-section">

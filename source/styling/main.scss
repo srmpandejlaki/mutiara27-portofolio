@@ -216,6 +216,25 @@ li {
   padding: 3rem 1rem;
 }
 
+.project-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  color: $font-color;
+
+  img {
+    width: 270px;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s;
+      // filter: blur(3px);
+    }
+  }
+}
+
 .buildingAlert {
   display: flex;
   flex-direction: column;
@@ -300,6 +319,12 @@ li {
     flex-direction: column;
     justify-content: center;
     height: 60vh;
+  }
+
+  .project-items {
+    img {
+      width: 350px;
+    }
   }
 }
 
