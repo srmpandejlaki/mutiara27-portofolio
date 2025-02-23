@@ -237,6 +237,15 @@ li {
   }
 }
 
+.overlay {
+  overflow: hidden;
+
+  &:active {
+    background-color: #181818;
+    filter: blur();
+  }
+}
+
 .buildingAlert {
   @include flex-column();
   align-items: center;
@@ -328,6 +337,19 @@ li {
   .project-items {
     img {
       width: 350px;
+    }
+  }
+
+  .overlay {
+    &:active {
+      display: flex;
+
+      img {
+        width: 450px;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+      }
     }
   }
 }
