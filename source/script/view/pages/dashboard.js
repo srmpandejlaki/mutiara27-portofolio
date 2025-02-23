@@ -34,6 +34,10 @@ const Dashboard = {
             <img src="Macbook-Air-mamen-mdo.vercel.app.png" alt="Capstone Project MAMEN">
             <p>MAMEN <br> Manado Micro Enterprises Website</p>
           </div>
+          <div class="project-items overlay">
+            <img src="Macbook-Air-mamen-mdo.vercel.app.png" alt="Capstone Project MAMEN">
+            <p>MAMEN <br> Manado Micro Enterprises Website</p>
+          </div>
         </section>
         <section class="message-section">
           <h1>MESSAGE</h1>
@@ -43,6 +47,7 @@ const Dashboard = {
   },
 
   async afterRender() {
+    // button on hero section
     const btnHero = document.querySelector('#btn-hero');
     const scroll = document.querySelector('#aboutSection');
 
@@ -51,6 +56,32 @@ const Dashboard = {
       const position = scroll.offsetTop + scrolling;
 
       window.scrollTo({ top: position, behavior:'smooth' });
+    });
+
+    // project-item pop up
+    const projectItems = document.querySelectorAll('.project-items img');
+    projectItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        const overlay = document.querySelector('.overlay');
+        overlay.classList.add('active');
+
+        const closeBtn = document.querySelector('.close-btn');
+        closeBtn.addEventListener('click', () => {
+          overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', (event) => {
+          if (event.target.classList.contains('overlay')) {
+            overlay.classList.remove('active');
+          }
+        });
+
+        window.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') {
+            overlay.classList.remove('active');
+          }
+        });
+      })
     });
   }
 };
