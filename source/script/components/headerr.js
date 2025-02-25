@@ -7,14 +7,13 @@ class HeaderBar extends HTMLElement {
     this.innerHTML = `
     <div class="header">
       <div class="logo">
-        <p>Mu<span>Di</span>.io</p>
+        <p>M<span>D</span>.io</p>
         <p class="descLogo">Mutiara Digital Portofolio</p>
       </div>
       <nav id="navbar-list" class="navbar-list">
         <ul>
           <li><a href="#/dashboard">Dashboard</a></li>
           <li><a href="#/about-me">About Me</a></li>
-          <li><a href="#/journey">Journey</a></li>
           <li><a href="#/blog">Blog</a></li>
         </ul>
       </nav>
