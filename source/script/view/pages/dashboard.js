@@ -30,13 +30,20 @@ const Dashboard = {
         </section>
         <section class="projects-section">
           <h1>PROJECTS</h1>
-          <div class="project-items">
-            <img src="Macbook-Air-mamen-mdo.vercel.app.png" alt="Capstone Project MAMEN">
-            <p>MAMEN <br> Manado Micro Enterprises Website</p>
+          <div class="project-items review">
+            <img class="img-item" src="Macbook-Air-mamen-mdo.vercel.app.png" alt="Capstone Project MAMEN">
+            <p>MAMEN<br>Manado Micro Enterprises Website</p>
           </div>
-          <div class="project-items overlay">
+          <div class="project-items overlay none">
             <img src="Macbook-Air-mamen-mdo.vercel.app.png" alt="Capstone Project MAMEN">
-            <p>MAMEN <br> Manado Micro Enterprises Website</p>
+            <div class="overlay-desc">
+              <h2>MAMEN <br> Manado Micro Enterprises Website</h2>
+              <p>
+                website ini akan membantu para pelaku UMKM dalam mempromosikan produk mereka khususnya yang berada di daerah Manado.
+                Dalam website ini, pelaku UMKM dapat melihat informasi produk-produk mereka, promosi, testimoni, dan lain-lain.
+              </p>
+            </div>
+            <i class="fa-solid fa-xmark closeBtn"></i>
           </div>
         </section>
         <section class="message-section">
@@ -59,29 +66,17 @@ const Dashboard = {
     });
 
     // project-item pop up
-    const projectItems = document.querySelectorAll('.project-items img');
-    projectItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        const overlay = document.querySelector('.overlay');
-        overlay.classList.add('active');
+    // Menggunakan kelas untuk elemen gambar jika ada banyak
+    const projectItems = document.querySelector('.img-item');
+    const target = document.querySelector('.none');
+    
+    projectItems.addEventListener('click', () => {
+      target.style.display = 'block';
+    });
 
-        const closeBtn = document.querySelector('.close-btn');
-        closeBtn.addEventListener('click', () => {
-          overlay.classList.remove('active');
-        });
-
-        overlay.addEventListener('click', (event) => {
-          if (event.target.classList.contains('overlay')) {
-            overlay.classList.remove('active');
-          }
-        });
-
-        window.addEventListener('keydown', (event) => {
-          if (event.key === 'Escape') {
-            overlay.classList.remove('active');
-          }
-        });
-      })
+    const closebtn = document.querySelector('.closeBtn');
+    closebtn.addEventListener('click', () => {
+      target.style.display = 'none';
     });
   }
 };
