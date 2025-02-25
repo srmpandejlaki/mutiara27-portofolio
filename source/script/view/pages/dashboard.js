@@ -31,12 +31,19 @@ const Dashboard = {
         <section class="projects-section">
           <h1>PROJECTS</h1>
           <div class="project-items">
-            <img src="Macbook-Air-mamen-mdo.vercel.app.png" alt="Capstone Project MAMEN">
+            <img class="img-item" src="Macbook-Air-mamen-mdo.vercel.app.png" alt="Capstone Project MAMEN">
             <p>MAMEN <br> Manado Micro Enterprises Website</p>
           </div>
           <div class="project-items overlay">
             <img src="Macbook-Air-mamen-mdo.vercel.app.png" alt="Capstone Project MAMEN">
-            <p>MAMEN <br> Manado Micro Enterprises Website</p>
+            <div class="overlay-desc">
+              <h2>MAMEN <br> Manado Micro Enterprises Website</h2>
+              <p>
+                website ini akan membantu para pelaku UMKM dalam mempromosikan produk mereka khususnya yang berada di daerah Manado.
+                Dalam website ini, pelaku UMKM dapat melihat informasi produk-produk mereka, promosi, testimoni, dan lain-lain.
+                
+              </p>
+            </div>
           </div>
         </section>
         <section class="message-section">
@@ -59,30 +66,24 @@ const Dashboard = {
     });
 
     // project-item pop up
-    const projectItems = document.querySelectorAll('.project-items img');
-    projectItems.forEach((item) => {
-      item.addEventListener('click', () => {
-        const overlay = document.querySelector('.overlay');
-        overlay.classList.add('active');
-
-        const closeBtn = document.querySelector('.close-btn');
-        closeBtn.addEventListener('click', () => {
-          overlay.classList.remove('active');
-        });
-
-        overlay.addEventListener('click', (event) => {
-          if (event.target.classList.contains('overlay')) {
-            overlay.classList.remove('active');
-          }
-        });
-
-        window.addEventListener('keydown', (event) => {
-          if (event.key === 'Escape') {
-            overlay.classList.remove('active');
-          }
-        });
-      })
+    // Menggunakan kelas untuk elemen gambar jika ada banyak
+    const projectItems = document.querySelector('.img-item');
+    const target = document.querySelector('.overlay');
+    
+    projectItems.addEventListener('click', () => {
+      if(target.style.display === 'none' || target.style.display === '') {
+        target.style.display = 'block';
+      } else {
+        target.style.display = 'none';
+      }
     });
+
+    // Event listener untuk tombol tutup (dipasang sekali)
+    // const closeBtn = document.querySelector('.close-btn');
+    // closeBtn.addEventListener('click', () => {
+    //   const overlay = document.querySelector('.overlay');
+    //   overlay.classList.remove('active');
+    // });
   }
 };
 

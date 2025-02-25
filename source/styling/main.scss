@@ -238,12 +238,12 @@ li {
 }
 
 .overlay {
-  overflow: hidden;
-
-  &:active {
-    background-color: #181818;
-    filter: blur();
-  }
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #1f202df1;
+  padding: 3rem 1rem;
 }
 
 .buildingAlert {
@@ -341,15 +341,19 @@ li {
   }
 
   .overlay {
-    &:active {
-      display: flex;
+    display: flex;
+    flex-direction: row;
 
-      img {
-        width: 450px;
-        position: absolute;
-        top: 50%;
-        left: 20%;
-      }
+    img {
+      width: 450px;
+      // position: absolute;
+      // top: 50%;
+      // left: 20%;
+    }
+
+    .overlay-desc {
+      @include flex-column();
+      gap: 2rem;
     }
   }
 }
