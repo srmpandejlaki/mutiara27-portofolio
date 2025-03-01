@@ -39,8 +39,8 @@ const Dashboard = {
             <div class="overlay-desc">
               <h2>MAMEN <br> Manado Micro Enterprises Website</h2>
               <p>
-                website ini akan membantu para pelaku UMKM dalam mempromosikan produk mereka khususnya yang berada di daerah Manado.
-                Dalam website ini, pelaku UMKM dapat melihat informasi produk-produk mereka, promosi, testimoni, dan lain-lain.
+                Platform promosi UMKM terutama bagi mereka yang kesulitan dalam mempromosikan produk mereka, 
+                guna memperluas jangkauan pasar, membantu visibilitas produk, dan meningkatkan daya saing.
               </p>
               <a href="https://mamen-mdo.vercel.app">Kunjungi Websitenya</a>
             </div>
@@ -72,7 +72,7 @@ const Dashboard = {
     
     projectItems.addEventListener('click', () => {
       if (target.style.display === 'none' || target.style.display === '') {
-          target.style.display = 'block';
+          target.style.display = 'flex';
       } else {
           target.style.display = 'none';
       }
