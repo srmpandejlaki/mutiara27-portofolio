@@ -1,0 +1,9 @@
+@use '../main.scss';
+
+/* HUMBURGER BUTTON */ 
+.humburgerMenu {
+  position: fixed;
+  top: 0;
+  right: 5px;
+  background-color: main.$background-color-1;
+}

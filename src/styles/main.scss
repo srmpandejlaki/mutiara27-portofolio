@@ -1,7 +1,8 @@
 /* VARIABLE */
-$background-color-1: #1F202D;
-$background-color-2: #181818;
-$font-color: #F0BC5A;
+$background-color-1: #16172f;
+$background-color-2: #F2E7D3;
+$font-color: #F2E7D3;
+$font-color2: #A37E51;
 
 /* MIXIN */ 
 @mixin flex-column() {
@@ -13,6 +14,7 @@ $font-color: #F0BC5A;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: $font-color2;
 }
 
 /* DEFAULT */
@@ -22,8 +24,6 @@ $font-color: #F0BC5A;
   padding-inline: 1rem;
   background-color: $background-color-1;
   position: fixed;
-
-  color: white;
   z-index: 1;
 }
 
@@ -42,34 +42,37 @@ $font-color: #F0BC5A;
 
 h1 {
   text-align: center;
-  color: white;
   font-size: 1.2rem;
   padding: 1rem 0;
 }
 
 i {
   cursor: pointer;
-  color: white;
+  transition: ease-in-out 0.3s;
 
   &:hover {
-    color: $font-color;
-    transition: ease-in-out 0.3s;
+    color: $background-color-1;
   }
 }
 
 button {
   min-height: 44px;
   padding: 0.5rem 1rem;
-  background-color: $background-color-2;
+  background-color: transparent;
   border-radius: 4px;
   border: none;
-  color: white;
+  color: $font-color;
   cursor: pointer;
+  transition: ease-in-out 0.3s;
+
+  &:hover {
+    background-color: $font-color;
+    color: $font-color2;
+  }
 }
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 .footer {
@@ -77,7 +80,7 @@ a {
   background-color: $background-color-1;
   
   p {
-    color: $font-color;
+    color: $font-color2;
     text-align: center;
     padding: 0.8rem;
   }
@@ -91,13 +94,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  
   p {
+    color: $font-color;
     font-size: 1.4rem;
   }
 
   span {
-    color: $font-color;
+    color: $font-color2;
   }
 
   .descLogo {
@@ -109,20 +113,24 @@ a {
   width: 100%;
   background-color: $background-color-1;
   
-  ul {
-    @include flex-column();
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  color: $font-color;
+  
+  a {
+    transition: ease-in-out 0.3s;
 
-    list-style: none;
-    color: $font-color;
+    &:hover {
+      color: $font-color;
+      text-decoration: underline;
+    }
   }
 }
 
 li {
   a {
-    color: white;
     text-decoration: none;
   }
 
@@ -131,18 +139,13 @@ li {
   }
 }
 
-/* HUMBURGER BUTTON */ 
-.humburgerMenu {
-  position: fixed;
-  top: 0;
-  right: 5px;
-  background-color: $background-color-1;
-}
-
 /* HERO SECTION */ 
 .hero-section {
   .pictBackground {
-    
+    position: absolute;
+    top: 0;
+    width: 100%;
+
     img {
       width: 100%;
       height: 100vh;
@@ -163,7 +166,7 @@ li {
   h3 {
     padding: 0 1rem 0 1.5rem;
     text-align: right;
-    color: white;
+    color: $font-color;
     font-size: 3rem;
   }
 }
@@ -186,8 +189,8 @@ li {
     }
     
     a {
-      color: white;
       font-size: 1.2rem;
+      transition: ease-in-out 0.5s;
       
       &:hover {
         text-decoration: underline;
@@ -196,7 +199,6 @@ li {
   }
   
   .desc {
-    color: white;
     font-size: 1rem;
   }
 }
@@ -205,7 +207,6 @@ li {
   padding-top: 3rem;
   display: flex;
   gap: 2rem;
-  color: white;
 
   .icon {
     display: flex;
@@ -278,7 +279,7 @@ li {
   }
 
   p {
-    color: white;
+    // color: white;
     text-align: center;
     max-width: 200px;
   }
