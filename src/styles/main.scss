@@ -34,7 +34,7 @@ $font-color: #F0BC5A;
 
   section {
     min-height: 95vh;
-    padding-block: 2rem;
+    // padding-block: 2rem;
     @include flex-column();
     justify-content: space-around;
   }
@@ -141,15 +141,15 @@ li {
 
 /* HERO SECTION */ 
 .hero-section {
-  background: url('../public/images/big-hero-6.jpg') center;
-  
-  .black-filter {
-    position: absolute;
-    top: 48px;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #181818a9;
+  .pictBackground {
+    
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(40%);
+    }
   }
 }
 
