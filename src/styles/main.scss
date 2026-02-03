@@ -147,6 +147,15 @@ a {
         color: $font-color;
       }
     }
+
+  }
+  
+  .active {
+    color: $font-color;
+
+    i {
+      color: $font-color;
+    }
   }
 }
 

@@ -1,10 +1,20 @@
 import React from "react";
+import KaritasLogo from "../../assets/pictures/logo-karitas.png";
 import DeLaSalleLogo from "../../assets/pictures/logo-delasalle.png";
 import DicodingLogo from "../../assets/pictures/logo-dicoding.png";
 
 function EducationLists() {
   return(
     <div className="studyLists">
+      <div className="study">
+        <img src={KaritasLogo} alt="Logo Karitas" />
+        <div className="desc">
+          <p className="bold">Karitas Catholic Senior High School Tomohon, Indonesia</p>
+          <p>Science</p>
+          <p>2019 - 2022</p>
+        </div>
+      </div>
+      <div className="line2"></div>
       <div className="study">
         <img src={DeLaSalleLogo} alt="Logo De La Salle Manado" />
         <div className="desc">

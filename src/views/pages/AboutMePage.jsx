@@ -10,7 +10,7 @@ function AboutMePage() {
       <div className="profilContainer">
         <div className="profil">
           <img src={ProfilePict} alt="Foto Profil" />
-          <p>Sesilia Riliany Mutiara Pandejlaki</p>
+          <p className="desc">Sesilia Riliany Mutiara Pandejlaki</p>
         </div>
         <p className="desc">
           An Informatics Engineering student focused on Frontend Development using React and SCSS.
