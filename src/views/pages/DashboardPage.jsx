@@ -18,7 +18,7 @@ function DashboardPage() {
           <div className="black-filter"></div>
             <div className="heroDesc">
               <h3>Code is an art, and the masterpiece is always a work in progress!!</h3>
-              <button id="btn-hero">Track Her</button>
+              <button id="btn-hero" className="bold">More Detail</button>
           </div>
         </section>
         <section id="aboutSection" className="aboutMe-section">

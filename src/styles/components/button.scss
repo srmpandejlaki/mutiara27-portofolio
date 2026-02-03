@@ -7,3 +7,9 @@
   right: 5px;
   background-color: main.$background-color-1;
 }
+
+.iconLink {
+  &:hover {
+    color: main.$background-color-1;
+  }
+}

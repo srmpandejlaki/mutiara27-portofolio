@@ -15,6 +15,7 @@ $font-color2: #A37E51;
   padding: 0;
   box-sizing: border-box;
   color: $font-color2;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* DEFAULT */
@@ -49,10 +50,6 @@ h1 {
 i {
   cursor: pointer;
   transition: ease-in-out 0.3s;
-
-  &:hover {
-    color: $background-color-1;
-  }
 }
 
 button {
@@ -125,10 +122,17 @@ a {
   
   a {
     transition: ease-in-out 0.3s;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 
     &:hover {
       color: $font-color;
       text-decoration: underline;
+
+      i {
+        color: $font-color;
+      }
     }
   }
 }
