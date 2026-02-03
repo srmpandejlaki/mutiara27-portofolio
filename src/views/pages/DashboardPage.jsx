@@ -1,43 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import HeroSection from "../../assets/pictures/big-hero-6.jpg";
-import ProfilePict from "../../assets/pictures/ice-bear.jpg";
 import MamenPict from "../../assets/pictures/Macbook-Air-mamen-mdo.vercel.app.png";
 
-import IconLink from "../../components/base/iconLink";
+import HeroSection from "../../components/dashboard/heroSection";
+import AboutSection from "../../components/dashboard/aboutSection";
 
 function DashboardPage() {
   return (
     <div>
       <div id="dashboard" className="container">
-        <section className="hero-section">
-          <div className="pictBackground">
-            <img src={HeroSection} alt="Hero Section" />
-          </div>
-          <div className="black-filter"></div>
-            <div className="heroDesc">
-              <h3>Code is an art, and the masterpiece is always a work in progress!!</h3>
-              <button id="btn-hero" className="bold">More Detail</button>
-          </div>
-        </section>
-        <section id="aboutSection" className="aboutMe-section">
-          <h1>ABOUT ME</h1>
-          <div className="profilContainer">
-            <div className="profil">
-              <img src={ProfilePict} alt="Foto Profil" />
-              <p><Link to="/about-me">Sesilia Pandejlaki</Link></p>
-            </div>
-            <p className="desc">
-              Haii, I'm a last-year Informatics Engineering student in Indonesia.
-              I'm also a person who is very interested in the field of web development.
-            </p>
-          </div>
-          <div className="iconConnection">
-            <p>Ayo Terhubung</p>
-            <IconLink />
-          </div>
-        </section>
+        <HeroSection />
+        <AboutSection />
         <section className="projects-section">
           <h1>PROJECTS</h1>
           <div className="project-items review">
@@ -45,6 +19,7 @@ function DashboardPage() {
             <p>MAMEN<br/>Manado Micro Enterprises Website</p>
           </div>
           <div className="project-items none overlay">
+            <i className="fa-solid fa-xmark closeBtn"></i>
             <img src={MamenPict} alt="Capstone Project MAMEN" />
             <div className="overlay-desc">
               <h2>MAMEN <br/> Manado Micro Enterprises Website</h2>
@@ -54,11 +29,7 @@ function DashboardPage() {
               </p>
               <a href="https://mamen-mdo.vercel.app">Kunjungi Websitenya</a>
             </div>
-            <i className="fa-solid fa-xmark closeBtn"></i>
           </div>
-        </section>
-        <section className="message-section">
-          <h1>MESSAGE</h1>
         </section>
       </div>
     </div>

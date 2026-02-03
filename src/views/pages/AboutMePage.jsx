@@ -1,7 +1,9 @@
 import React from "react";
 import ProfilePict from "../../assets/pictures/ice-bear.jpg";
+
 import TechLists from "../../components/aboutMe/technologies";
 import EducationLists from "../../components/aboutMe/education";
+import ExperienceLists from "../../components/aboutMe/experience";
 
 function AboutMePage() {
   return (
@@ -25,6 +27,11 @@ function AboutMePage() {
       <div className="studyContainer">
         <h3>Education</h3>
         <EducationLists />
+      </div>
+      <div className="line"></div>
+      <div className="experienceContainer">
+        <h3>Experience</h3>
+        <ExperienceLists />
       </div>
     </div>
   );
