@@ -6,7 +6,7 @@ import EducationLists from "../../components/aboutMe/education";
 function AboutMePage() {
   return (
     <div className="container aboutMe-page">
-      <h1>About Me Page</h1>
+      <h1>About Me</h1>
       <div className="profilContainer">
         <div className="profil">
           <img src={ProfilePict} alt="Foto Profil" />
