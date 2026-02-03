@@ -24,11 +24,11 @@ function DashboardPage() {
           <div className="profilContainer">
             <div className="profil">
               <img src={ProfilePict} alt="Foto Profil" />
-              <p><Link to="/dashboard">Sesilia Pandejlaki</Link></p>
+              <p><Link to="/about-me">Sesilia Pandejlaki</Link></p>
             </div>
             <p className="desc">
-              Seorang mahasiswa semester lima yang mendapatkan motivasi untuk terus berkembang dan belajar hal baru 
-              demi mencapai cita-citanya karena berhasil masuk ke dunia teknologi khususnya di bidang Web Development.
+              I am a last-year Informatics Engineering student on <br />University of Catholic De La Salle Manado, Indonesia.
+              I am a person who is very interested in the field of web development.
             </p>
           </div>
           <div className="iconConnection">
