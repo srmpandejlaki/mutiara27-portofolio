@@ -65,9 +65,22 @@
     gap: 0.5rem;
   }
 
-  .study {
+  .study, .experience {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
+}
+
+.experience img {
+  background-color: main.$background-color-1;
+}
+
+.twoSection {
+  padding-block: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
 }

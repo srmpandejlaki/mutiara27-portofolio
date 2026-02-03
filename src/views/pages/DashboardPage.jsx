@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import MamenPict from "../../assets/pictures/Macbook-Air-mamen-mdo.vercel.app.png";
+import MamenPict from "../../assets/pictures/projects/Macbook-Air-mamen-mdo.vercel.app.png";
 
 import HeroSection from "../../components/dashboard/heroSection";
 import AboutSection from "../../components/dashboard/aboutSection";

@@ -24,14 +24,15 @@ function AboutMePage() {
         <TechLists />
       </div>
       <div className="line"></div>
-      <div className="studyContainer">
-        <h3>Education</h3>
-        <EducationLists />
-      </div>
-      <div className="line"></div>
-      <div className="experienceContainer">
-        <h3>Experience</h3>
-        <ExperienceLists />
+      <div className="twoSection">
+        <div className="studyContainer">
+          <h3>Education</h3>
+          <EducationLists />
+        </div>
+        <div className="experienceContainer">
+          <h3>Experience</h3>
+          <ExperienceLists />
+        </div>
       </div>
     </div>
   );
