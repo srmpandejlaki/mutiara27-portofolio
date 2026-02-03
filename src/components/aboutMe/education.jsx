@@ -13,6 +13,7 @@ function EducationLists() {
           <p>2022 - Present</p>
         </div>
       </div>
+      <div className="line2"></div>
       <div className="study">
         <img src={DicodingLogo} alt="Logo Dicoding" />
         <div className="desc">

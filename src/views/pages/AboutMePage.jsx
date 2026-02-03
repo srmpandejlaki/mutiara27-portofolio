@@ -13,14 +13,15 @@ function AboutMePage() {
           <p>Sesilia Riliany Mutiara Pandejlaki</p>
         </div>
         <p className="desc">
-          Hii, I'm a last-year Informatics Engineering student in Indonesia.
-          I'm a person who is very interested in the field of web development.
+          An Informatics Engineering student focused on Frontend Development using React and SCSS.
+          Experienced in building web applications with API integration and a basic backend foundation.
         </p>
       </div>
       <div className="techContainer">
         <h3>Technologies</h3>
         <TechLists />
       </div>
+      <div className="line"></div>
       <div className="studyContainer">
         <h3>Education</h3>
         <EducationLists />

@@ -29,7 +29,7 @@ function DashboardPage() {
               <p><Link to="/about-me">Sesilia Pandejlaki</Link></p>
             </div>
             <p className="desc">
-              I'm a last-year Informatics Engineering student in Indonesia.
+              Haii, I'm a last-year Informatics Engineering student in Indonesia.
               I'm also a person who is very interested in the field of web development.
             </p>
           </div>
