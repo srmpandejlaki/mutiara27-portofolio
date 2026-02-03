@@ -5,6 +5,8 @@ import HeroSection from "../../assets/pictures/big-hero-6.jpg";
 import ProfilePict from "../../assets/pictures/ice-bear.jpg";
 import MamenPict from "../../assets/pictures/Macbook-Air-mamen-mdo.vercel.app.png";
 
+import IconLink from "../../components/base/iconLink";
+
 function DashboardPage() {
   return (
     <div>
@@ -16,7 +18,7 @@ function DashboardPage() {
           <div className="black-filter"></div>
             <div className="heroDesc">
               <h3>Code is an art, and the masterpiece is always a work in progress!!</h3>
-              <button id="btn-hero">Track the Owner</button>
+              <button id="btn-hero">Track Her</button>
           </div>
         </section>
         <section id="aboutSection" className="aboutMe-section">
@@ -27,18 +29,13 @@ function DashboardPage() {
               <p><Link to="/about-me">Sesilia Pandejlaki</Link></p>
             </div>
             <p className="desc">
-              I am a last-year Informatics Engineering student on <br />University of Catholic De La Salle Manado, Indonesia.
-              I am a person who is very interested in the field of web development.
+              I'm a last-year Informatics Engineering student in Indonesia.
+              I'm also a person who is very interested in the field of web development.
             </p>
           </div>
           <div className="iconConnection">
             <p>Ayo Terhubung</p>
-            <div className="icon">
-              <a href="https://www.linkedin.com/in/sesilia-pandejlaki/"><i className="fa-brands fa-linkedin"></i></a>
-              <a href="https://github.com/srmpandejlaki"><i className="fa-brands fa-github"></i></a>
-              <a href="https://www.instagram.com/mutiarapandejlaki27/?hl=en"><i className="fa-brands fa-instagram"></i></a>
-              <a href="#"><i className="fa-regular fa-envelope"></i></a>
-            </div>
+            <IconLink />
           </div>
         </section>
         <section className="projects-section">
