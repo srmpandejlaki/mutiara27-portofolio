@@ -1,0 +1,47 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  overflow: hidden;
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+  }
+}
+
+/* base background shape */
+.bg-shape {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 1;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(99, 102, 241, 0.35),
+    transparent 70%
+  );
+
+  &--top-right {
+    top: -120px;
+    right: -120px;
+  }
+
+  &--bottom-left {
+    bottom: -140px;
+    left: -140px;
+    background: radial-gradient(
+      circle at center,
+      rgba(56, 189, 248, 0.35),
+      transparent 70%
+    );
+  }
+}
