@@ -18,7 +18,7 @@ function AboutSection() {
         </p>
       </div>
       <div className="iconConnection">
-        <p>Ayo Terhubung</p>
+        <p>Connect with me</p>
         <IconLink />
       </div>
     </section>
