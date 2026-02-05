@@ -20,12 +20,17 @@ $font-color2: #A37E51;
 
 /* DEFAULT */
 .header {
-  max-height: 3rem;
+  height: 3rem;
   width: 100%;
   padding-inline: 1rem;
   background-color: $background-color-1;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container {
@@ -145,10 +150,6 @@ a {
   font-size: 1.5rem;
   color: $font-color;
   cursor: pointer;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .navbar-list {
