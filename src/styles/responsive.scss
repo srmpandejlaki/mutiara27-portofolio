@@ -2,17 +2,43 @@
 
 /* RESPONSIVE */
 @media screen and (max-width: 580px) {
-  .navbar-list {
+  .nav-section {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar-list {
     flex-direction: column;
     justify-content: center;
-    // align-items: flex-end;
-    padding: 1.5rem 1rem;
+    align-items: center;
+    flex: 1;
+    gap: 1.5rem;
 
     i {
       font-size: 0.8rem;
     }
+  }
+
+  .nav-footer {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    i {
+      &:hover {
+        color: main.$font-color;
+      }
+    }
+  }
+
+  .desktop-nav {
+    display: none;
   }
 }
 
@@ -35,8 +61,15 @@
     }
   }
 
-  .humburgerMenu {
+  .hamburgerMenu, .nav-head, .nav-footer {
     display: none;
+  }
+  .desktop-nav {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
   
   .heroDesc {

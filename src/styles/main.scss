@@ -123,10 +123,36 @@ a {
   }
 }
 
+.nav-section {
+  background-color: $background-color-1;
+}
+
+.nav-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  
+  .closeBtn {
+    font-size: 1.5rem;
+    color: $font-color;
+    cursor: pointer;
+  }
+}
+
+.hamburgerMenu {
+  display: block;
+  font-size: 1.5rem;
+  color: $font-color;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .navbar-list {
   width: 100%;
-  background-color: $background-color-1;
-  
   display: flex;
   gap: 1rem;
   color: $font-color;
@@ -236,12 +262,12 @@ li {
   display: flex;
   justify-content: center;
   gap: 2rem;
+}
 
-  .icon {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
+.icon {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .buildingAlert {
