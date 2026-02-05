@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 import DashboardPage from './pages/DashboardPage';
 import AboutMePage from './pages/AboutMePage';
@@ -9,6 +10,15 @@ import FooterSection from '../components/base/footerr';
 
 
 function App() {
+  const [showNavMobile, setShowNavMobile] = useState(false);
+
+  const handleNavClick = () => {
+    setShowNavMobile(true);
+  };
+
+  const handleCloseNav = () => {
+    setShowNavMobile(false);
+  };
 
   return (
     <div>
@@ -17,7 +27,17 @@ function App() {
           <p>M<span>D</span>.io</p>
           <p className="descLogo">Mutiara Digital Portofolio</p>
         </div>
-        <NavigationBar />
+        <i className="fa-solid fa-bars navBtn hamburgerMenu" onClick={handleNavClick}></i>
+        
+        {showNavMobile && <NavigationBar handleCloseNav={handleCloseNav} handleNavClick={handleNavClick} />}
+        
+        {/* Desktop Nav - selalu tampil */}
+        <nav className="desktop-nav">
+          <div className="navbar-list">
+            <NavLink to="/dashboard"><i className="fa-solid fa-house"></i>Dashboard</NavLink>
+            <NavLink to="/about-me"><i className="fa-solid fa-user"></i>About</NavLink>
+          </div>
+        </nav>
       </header>
 
       <main>

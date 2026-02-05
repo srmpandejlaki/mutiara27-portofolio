@@ -123,13 +123,37 @@ a {
   }
 }
 
+.nav-section {
+  background-color: $background-color-1;
+}
+
+.nav-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  
+  .closeBtn {
+    font-size: 1.5rem;
+    color: $font-color;
+    cursor: pointer;
+  }
+}
+
+.hamburgerMenu {
+  display: block;
+  font-size: 1.5rem;
+  color: $font-color;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .navbar-list {
   width: 100%;
-  background-color: $background-color-1;
-  
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
   gap: 1rem;
   color: $font-color;
   
@@ -236,63 +260,14 @@ li {
 .iconConnection {
   padding-top: 3rem;
   display: flex;
-  gap: 2rem;
-
-  .icon {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
-  }
-}
-
-/* PROJECTS */ 
-.projects-section {
-  padding: 3rem 1rem;
-}
-
-.project-items {
-  align-items: center;
-  text-align: center;
-  color: $font-color;
-
-  img {
-    width: 270px;
-
-    &:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s;
-    }
-  }
-}
-
-.review {
-  @include flex-column();
-  gap: 1rem;
-}
-
-.none {
-  display: none;
+  justify-content: center;
   gap: 2rem;
 }
 
-.overlay {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  background-color: #1f202df1;
-  padding: 3rem 1rem;
-  margin-top: 50%;
-
-  i {
-    position: absolute;
-    font-size: 1.5rem;
-  }
-
-  .overlay-desc {
-    @include flex-column();
-    gap: 2rem;
-  }
+.icon {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .buildingAlert {
@@ -318,163 +293,4 @@ li {
 /* MESSAGE */
 .message-section {
   padding: 3rem 1rem;
-}
-
-
-/* RESPONSIVE */
-@media screen and (max-width: 580px) {
-  .navbar-list {
-    overflow: hidden;
-    position: absolute;
-    right: -600px;
-
-    padding-block: 1.5rem;
-
-    li a {
-      font-size: 1.2rem;
-    }
-  }
-
-  .navbar-list.open {
-    right: 0px;
-  }
-
-  .iconConnection {
-    justify-content: center;
-  }
-
-  .none {
-    flex-direction: column;
-  }
-
-  .overlay {
-    i {
-      right: 5%;
-      top: 2%;
-    }
-  }
-
-  .overlay-desc {
-    h2 {
-      font-size: 1rem;
-    }    
-  }
-}
-
-@media screen and (min-width: 580px) {
-  .header {
-    display: flex;
-  }
-
-  .navbar-list ul {
-    background-color: $background-color-1;
-    padding: 1rem 5rem;
-    width: 90%;
-    height: 3rem;
-    flex-direction: row;
-    gap: 1rem;
-  }
-
-  .humburgerMenu {
-    display: none;
-  }
-  
-  .heroDesc {
-    width: 100%;
-    height: 95vh;
-    justify-content: center;
-    
-    h3 {
-      padding: 0 8rem;
-      text-align: center;
-      font-size: 2rem;
-    }
-
-    button {
-      margin-inline: 4rem;
-    }
-  }
-
-  .profilContainer {
-    @include flex-column();
-    justify-content: center;
-    height: 60vh;
-  }
-
-  .project-items {
-    img {
-      width: 350px;
-    }
-  }
-
-  .overlay {
-    height: 80vh;
-    margin-top: 15%;
-    padding-inline: 3rem;
-
-    img {
-      width: 500px;
-      height: fit-content;
-    }
-
-    i {
-      right: 5%;
-      top: 10%;
-    }
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .header {
-    gap: 5rem;
-    padding-inline: 3rem;
-  }
-
-  .navbar-list ul {
-    padding-inline: 10rem;
-  }
-
-  .aboutMe-section,
-  .projects-section,
-  .aboutMe-page {
-    padding-inline: 3rem;
-  }
-
-  .hero-section {
-    background-position: center;
-    background-size: cover;
-    height: 400px;
-  }
-
-  .heroDesc {
-    h3 {
-      padding: 0 10rem;
-    }
-  }
-
-  .profilContainer {
-    flex-direction: row;
-    align-items: center;
-
-    .profil {
-      width: 100%;
-
-      img {
-        width: 180px;
-      }
-      
-      a {
-        font-size: 1.5rem;
-      }
-    }
-
-    .desc {
-      font-size: 1.2rem;
-    }
-  }
-  
-  .iconConnection {
-    gap: 1rem;
-    justify-content: flex-end;
-  }
 }
