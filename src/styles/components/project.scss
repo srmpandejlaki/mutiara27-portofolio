@@ -16,6 +16,10 @@
 .project-items {
   align-items: center;
   text-align: center;
+
+  img {
+    width: 250px;
+  }
 }
 
 .review {
@@ -23,6 +27,7 @@
   gap: 1rem;
 }
 
+/* Project Details */ 
 .overlay {
   position: fixed;
   width: 100%;
@@ -38,22 +43,38 @@
     cursor: pointer;
     position: absolute;
     font-size: 1.5rem;
-  }
+    right: 5%;
+    top: 2%;
 
-  .overlay-desc {
-    @include main.flex-column();
-    gap: 2rem;
+    &:hover {
+      color: main.$font-color;
+    }
+  }
+}
+
+.overlay-desc {
+  @include main.flex-column();
+  gap: 2rem;
+  
+  h2 {
+    font-size: 1rem;
+  } 
+
+  p, a {
+    font-size: 0.8rem;
   }
 }
 
 .project-content {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .project-images .img-mac {
-  // width: 250px;
+  width: 250px;
   display: flex;
   justify-content: center;
 }

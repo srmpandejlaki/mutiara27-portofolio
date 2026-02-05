@@ -17,7 +17,8 @@ function MamenProject({ onClose }) {
             Platform promosi UMKM terutama bagi mereka yang kesulitan dalam mempromosikan produk mereka, 
             guna memperluas jangkauan pasar, membantu visibilitas produk, dan meningkatkan daya saing.
           </p>
-          <a href="https://mamen-mdo.vercel.app">Kunjungi Websitenya</a>
+          <p>Tech<br/>HTML, SCSS, Javascript, Hapi </p>
+          <a href="https://mamen-mdo.vercel.app">kunjungi website</a>
         </div>
       </div>
     </div>

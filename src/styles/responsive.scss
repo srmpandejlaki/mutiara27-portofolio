@@ -3,54 +3,16 @@
 /* RESPONSIVE */
 @media screen and (max-width: 580px) {
   .navbar-list {
-    overflow: hidden;
-    position: absolute;
-    right: -600px;
-
-    padding-block: 1.5rem;
-
-    li a {
-      font-size: 1.2rem;
-    }
-  }
-
-  .navbar-list.open {
-    right: 0px;
-  }
-
-  .iconConnection {
-    justify-content: center;
-  }
-
-  .none {
+    width: 100%;
+    height: 100vh;
     flex-direction: column;
-  }
-
-  .project-items {
-    img {
-      width: 250px;
-    }
-  }
-
-  .project-content {
-    flex-wrap: wrap;
     justify-content: center;
-  }
+    // align-items: flex-end;
+    padding: 1.5rem 1rem;
 
-  .overlay {
-    .img-mac {
-      width: 250px;
-    }
     i {
-      right: 5%;
-      top: 2%;
+      font-size: 0.8rem;
     }
-  }
-
-  .overlay-desc {
-    h2 {
-      font-size: 1rem;
-    }    
   }
 }
 
@@ -59,13 +21,18 @@
     display: flex;
   }
 
-  .navbar-list ul {
-    background-color: main.$background-color-1;
-    padding: 1rem 5rem;
-    width: 90%;
-    height: 3rem;
-    flex-direction: row;
-    gap: 1rem;
+  .navbar-list{
+    justify-content: flex-end;
+    align-items: center;
+  
+    ul {
+      background-color: main.$background-color-1;
+      padding: 1rem 5rem;
+      width: 90%;
+      height: 3rem;
+      flex-direction: row;
+      gap: 1rem;
+    }
   }
 
   .humburgerMenu {
@@ -78,9 +45,9 @@
     justify-content: center;
     
     h3 {
-      padding: 0 8rem;
+      padding: 0 6.5rem;
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     button {
@@ -101,7 +68,7 @@
   }
 
   .project-content {
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: center;
   }
 
