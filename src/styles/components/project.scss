@@ -53,5 +53,7 @@
 }
 
 .project-images .img-mac {
-  width: 250px;
+  // width: 250px;
+  display: flex;
+  justify-content: center;
 }
