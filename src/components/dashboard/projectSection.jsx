@@ -6,6 +6,7 @@ function ProjectSection() {
   return(
     <section className="projects-section">
       <h1>PROJECTS</h1>
+      <p>geser untuk lihat projek lainnya</p>
       <MamenSection />
     </section>
   );

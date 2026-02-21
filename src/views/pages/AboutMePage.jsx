@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePict from "../../assets/pictures/ice-bear.jpg";
+import ProfilePict from "../../assets/pictures/character-blue-white.png";
 
 import TechLists from "../../components/aboutMe/technologies";
 import EducationLists from "../../components/aboutMe/education";

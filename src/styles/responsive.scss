@@ -101,8 +101,7 @@
   }
 
   .project-content {
-    // flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
   }
 
   .overlay {
@@ -172,5 +171,20 @@
   .iconConnection {
     gap: 1rem;
     justify-content: flex-end;
+  }
+
+  .overlay {
+    .img-mac {
+      width: 500px;
+    }
+
+    .overlay-desc {
+      p, a {
+        font-size: 1.3rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    } 
   }
 }

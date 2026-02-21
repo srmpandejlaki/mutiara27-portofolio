@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import IconLink from "../../components/base/iconLink";
-import ProfilePict from "../../assets/pictures/ice-bear.jpg";
+import ProfilePict from "../../assets/pictures/character-blue-white.png";
 
 function AboutSection() {
   return (
