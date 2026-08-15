@@ -16,6 +16,7 @@ function HeroSection() {
       </div>
       <div className="black-filter"></div>
         <div className="heroDesc">
+          <h3>Hi! I'm Mutiara<br/>I'm an Undergraduate Informatics Engineering Student</h3>
           <h3>Code is an art, and the masterpiece is always a work in progress!!</h3>
           <button onClick={handleMouseEnter} className="bold">More Detail</button>
       </div>
