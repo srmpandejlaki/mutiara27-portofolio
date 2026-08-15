@@ -14,7 +14,7 @@ function NavigationBar({ handleCloseNav }) {
         <i className="fa-solid fa-xmark closeBtn" onClick={handleCloseNav}></i>
       </div>
       <div className="navbar-list">
-        <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "active" : "")}><i className="fa-solid fa-house"></i>Dashboard</NavLink>
+        <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "active" : "")}><i className="fa-solid fa-house"></i>Home</NavLink>
         <NavLink to="/about-me" className={({ isActive }) => (isActive ? "active" : "")}><i className="fa-solid fa-user"></i>About</NavLink>
         {/* <NavLink to="/blog">Blog</NavLink> */}
       </div>
