@@ -1,7 +1,7 @@
 import React from "react";
-import KaritasLogo from "../../assets/pictures/logo-karitas.png";
-import DeLaSalleLogo from "../../assets/pictures/logo-delasalle.png";
-import DicodingLogo from "../../assets/pictures/logo-dicoding.png";
+import KaritasLogo from "/public/logo/logo-karitas.png";
+import DeLaSalleLogo from "/public/logo/logo-delasalle.png";
+import DicodingLogo from "/public/logo/logo-dicoding.png";
 
 function EducationLists() {
   return(

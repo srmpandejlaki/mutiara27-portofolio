@@ -20,7 +20,7 @@ function HeroSection() {
         <div className="heroDesc">
           <div className="head">
             <h2 className="greeting">Hi! I'm Mutiara</h2>
-            <h3 className="desc">An Undergraduate Informatics Engineering Student & Aspiring Software Developer</h3>
+            <h3 className="desc">Final-year Informatics Engineering Student | Aspiring Frontend & Fullstack Developer</h3>
           </div>
           <h3 className="desc">I build web applications with React, SCSS, Next.JS, FastAPI, and PostgreSQL</h3>
           {/* <h3>Code is an art, and the masterpiece is always a work in progress.</h3> */}
