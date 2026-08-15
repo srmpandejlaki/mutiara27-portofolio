@@ -2,6 +2,10 @@
 
 /* RESPONSIVE */
 @media screen and (max-width: 580px) {
+  .hero-section h3 {
+    font-size: 2rem;
+    padding-inline: 1rem;
+  }
   .nav-section {
     position: fixed;
     top: 0;
