@@ -40,6 +40,10 @@
   .desktop-nav {
     display: none;
   }
+
+  .heroContent {
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 580px) {
@@ -72,12 +76,26 @@
     transform: translateY(-50%);
   }
   
-  .heroDesc {
+  .heroContent {
     width: 100%;
     height: 95vh;
     justify-content: center;
+    align-items: center;
     padding: 3rem;
-    
+  }
+
+  .heroPict {
+    img {
+      width: 250px;
+      transition: ease-in-out 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  .heroDesc {
     .greeting {
       font-size: 2.5rem;
     }

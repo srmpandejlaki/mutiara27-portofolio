@@ -1,6 +1,5 @@
 import React from "react";
-
-import HeroSectionPict from "../../assets/pictures/big-hero-6.jpg";
+import ProfilePict from "../../assets/pictures/character-blue-white.png";
 
 function HeroSection() {
 
@@ -12,10 +11,12 @@ function HeroSection() {
   return (
     <section className="hero-section">
       <div className="pictBackground">
-        {/* <img src={HeroSectionPict} alt="Hero Section" /> */}
         <div className="black-background"></div>
       </div>
-      <div className="black-filter"></div>
+      <div className="heroContent">
+        <div className="heroPict">
+          <img src={ProfilePict} alt="Foto Profil" />
+        </div>
         <div className="heroDesc">
           <div className="head">
             <h2 className="greeting">Hi! I'm Mutiara</h2>
@@ -24,6 +25,7 @@ function HeroSection() {
           <h3 className="desc">I build web applications with React, SCSS, Next.JS, FastAPI, and PostgreSQL</h3>
           {/* <h3>Code is an art, and the masterpiece is always a work in progress.</h3> */}
           <button onClick={handleMouseEnter} className="bold">More Detail</button>
+        </div>
       </div>
     </section>
   );

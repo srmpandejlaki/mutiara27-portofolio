@@ -34,7 +34,7 @@ function App() {
         {/* Desktop Nav - selalu tampil */}
         <nav className="desktop-nav">
           <div className="navbar-list">
-            <NavLink to="/dashboard"><i className="fa-solid fa-house"></i>Dashboard</NavLink>
+            <NavLink to="/home"><i className="fa-solid fa-house"></i>Home</NavLink>
             <NavLink to="/about-me"><i className="fa-solid fa-user"></i>About</NavLink>
           </div>
         </nav>
@@ -42,8 +42,8 @@ function App() {
 
       <main>
         <Routes>
-          <Route path='/' element={<Navigate to="/dashboard" />}></Route>
-          <Route path='/dashboard' element={<DashboardPage />}></Route>
+          <Route path='/' element={<Navigate to="/home" />}></Route>
+          <Route path='/home' element={<DashboardPage />}></Route>
           <Route path='/about-me' element={<AboutMePage />}></Route>
           <Route path='/blog' element={<DashboardPage />}></Route>
         </Routes>

@@ -197,6 +197,27 @@ li {
   }
 }
 
+.heroPict, .profil {
+    @include flex-column();
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  
+    img {
+      width: 120px;
+      border-radius: 50%;
+    }
+    
+    a {
+      font-size: 1.2rem;
+      transition: ease-in-out 0.5s;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
 /* HERO SECTION */ 
 .hero-section {
   .pictBackground {
@@ -220,13 +241,18 @@ li {
     height: 100vh;
     background-color: rgb(25, 25, 25);
   }
+
+  .heroContent {
+    position: absolute;
+    padding-top: 1rem;
+    display: flex;
+    gap: 3rem;
+  }
 }
 
 .heroDesc {
   @include flex-column();
   gap: 3rem;
-  position: absolute;
-  padding-top: 1rem;
   
   .greeting, .desc {
     text-align: left;
@@ -261,27 +287,6 @@ li {
 }
 
 .profilContainer {
-  .profil {
-    @include flex-column();
-    align-items: center;
-    gap: 1rem;
-    padding-bottom: 1rem;
-  
-    img {
-      width: 120px;
-      border-radius: 50%;
-    }
-    
-    a {
-      font-size: 1.2rem;
-      transition: ease-in-out 0.5s;
-      
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-  
   .desc {
     font-size: 1rem;
   }
