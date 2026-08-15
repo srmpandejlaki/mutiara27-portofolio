@@ -1,5 +1,5 @@
 import React from "react";
-import RsnLogo from "../../assets/pictures/logo-rsn.png";
+import RsnLogo from "/public/logo/logo-rsn.png";
 
 function ExperienceLists() {
   return (

@@ -1,13 +1,99 @@
-import React from "react";
-
-import MamenSection from "../project/mamen/mamen";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import projects from "../../utils/projects";
 
 function ProjectSection() {
+  const [showOverlay, setShowOverlay] = useState(null);
+  const [current, setCurrent] = useState(0);
+  const containerRef = useRef(null);
+  const intervalRef = useRef(null);
+
+  const scrollToSlide = useCallback((index) => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo({
+        left: index * containerRef.current.offsetWidth,
+        behavior: "smooth",
+      });
+    }
+  }, []);
+
+  // Auto-scroll setiap 5 detik
+  const startAutoScroll = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setCurrent((prev) => {
+        const next = (prev + 1) % projects.length;
+        scrollToSlide(next);
+        return next;
+      });
+    }, 5000);
+  }, [scrollToSlide]);
+
+  useEffect(() => {
+    startAutoScroll();
+    return () => clearInterval(intervalRef.current);
+  }, [startAutoScroll]);
+
+  // Sync current index saat user scroll manual
+  const handleScroll = () => {
+    if (containerRef.current) {
+      const container = containerRef.current;
+      const index = Math.round(container.scrollLeft / container.offsetWidth);
+      if (index !== current) {
+        setCurrent(index);
+        // Reset timer auto-scroll setelah user scroll manual
+        startAutoScroll();
+      }
+    }
+  };
+
+  const handleCloseOverlay = () => {
+    setShowOverlay(null);
+  };
+
   return(
     <section className="projects-section">
       <h1>PROJECTS</h1>
-      <p>geser untuk lihat projek lainnya</p>
-      <MamenSection />
+      <p>These are some of the projects I've worked on.</p>
+
+      <div 
+        className="projectContainer"
+        ref={containerRef}
+        onScroll={handleScroll}
+      >
+        {projects.map((project) => (
+          <div key={project.id} className="project-items review">
+            <img className="img-item" src={project.image} onClick={() => setShowOverlay(project)} alt={project.alt} />
+            <p>{project.name}<br/>{project.description}</p>
+          </div>
+        ))}
+      </div>
+
+      {showOverlay && (
+        <div className="overlay">
+          <i className="fa-solid fa-xmark closeBtn" onClick={handleCloseOverlay}></i>
+          <div className="project-content">
+            <div className="project-images">
+              <img className="img-mac" src={showOverlay.detailImage} alt={showOverlay.alt} />
+            </div>
+            <div className="overlay-desc">
+              <h2>{showOverlay.name}</h2>
+              <h2>{showOverlay.description}</h2>
+              <p>{showOverlay.details}</p>
+              <div className="roleTeam">
+                <p>
+                  <span>Role</span><br/>{showOverlay.role}</p>
+                <p>
+                  <span>Team</span><br/>{showOverlay.team}</p>
+              </div>
+              <p>
+                <span>Tech</span><br/>{showOverlay.tech}</p>
+              <a href={showOverlay.link} target="_blank" rel="noopener noreferrer">
+                visit website
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

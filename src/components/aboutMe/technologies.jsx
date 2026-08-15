@@ -1,16 +1,16 @@
 import React from "react";
-import HtmlIcon from "../../assets/pictures/tech-icon/html-icon.png";
-import CssIcon from "../../assets/pictures/tech-icon/css-icon.png";
-import SassIcon from "../../assets/pictures/tech-icon/sass-icon.png";
-import JsIcon from "../../assets/pictures/tech-icon/js-icon.png";
-import ReactIcon from "../../assets/pictures/tech-icon/react-icon.png";
-import PostgreIcon from "../../assets/pictures/tech-icon/postgre-icon.png";
-import GitIcon from "../../assets/pictures/tech-icon/git-icon.png";
-import GithubIcon from "../../assets/pictures/tech-icon/github-icon.png";
-import VScodeIcon from "../../assets/pictures/tech-icon/vscode-icon.png";
-import FigmaIcon from "../../assets/pictures/tech-icon/figma-icon.png";
-import NotionIcon from "../../assets/pictures/tech-icon/notion-icon.png";
-import PostmanIcon from "../../assets/pictures/tech-icon/postman-icon.png";
+import HtmlIcon from "/public/tech-icon/html-icon.png";
+import CssIcon from "/public/tech-icon/css-icon.png";
+import SassIcon from "/public/tech-icon/sass-icon.png";
+import JsIcon from "/public/tech-icon/js-icon.png";
+import ReactIcon from "/public/tech-icon/react-icon.png";
+import PostgreIcon from "/public/tech-icon/postgre-icon.png";
+import GitIcon from "/public/tech-icon/git-icon.png";
+import GithubIcon from "/public/tech-icon/github-icon.png";
+import VScodeIcon from "/public/tech-icon/vscode-icon.png";
+import FigmaIcon from "/public/tech-icon/figma-icon.png";
+import NotionIcon from "/public/tech-icon/notion-icon.png";
+import PostmanIcon from "/public/tech-icon/postman-icon.png";
 
 function TechLists() {
   return(
