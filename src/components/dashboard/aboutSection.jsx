@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import IconLink from "../../components/base/iconLink";
 import ProfilePict from "/public/character-blue-white.png";
+import SkillLists from "../../components/aboutMe/technologies";
 
 function AboutSection() {
   return (
@@ -10,12 +11,15 @@ function AboutSection() {
       <div className="profilContainer">
         <div className="profil">
           <img src={ProfilePict} alt="Foto Profil" />
-          <p><Link to="/about-me">Sesilia Pandejlaki</Link></p>
+          <p><Link to="/about-me">Sesilia Riliany<br />Mutiara Pandejlaki</Link></p>
         </div>
-        <p className="desc">
-          Haii, I'm a last-year Informatics Engineering student in Indonesia.
-          I'm also a person who is very interested in the field of web development.
-        </p>
+        <div className="desc">
+          <p>
+            Hi, I'm a final-year Informatics Engineering student from Indonesia 
+            with a strong interest in web development.
+          </p>
+          <SkillLists />
+        </div>
       </div>
       <div className="iconConnection">
         <p>Connect with me</p>

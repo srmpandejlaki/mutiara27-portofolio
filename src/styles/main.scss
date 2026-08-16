@@ -290,8 +290,22 @@ li {
 }
 
 .profilContainer {
+  display: flex;
+  flex-direction: column;
+  padding-block: 2rem;
+  
+  .profil {
+    gap: 0.5rem;
+
+    p {
+      text-align: center;
+    }
+  }
   .desc {
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 

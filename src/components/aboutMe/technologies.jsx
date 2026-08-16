@@ -1,58 +1,43 @@
 import React from "react";
-import HtmlIcon from "/public/tech-icon/html-icon.png";
-import CssIcon from "/public/tech-icon/css-icon.png";
-import SassIcon from "/public/tech-icon/sass-icon.png";
-import JsIcon from "/public/tech-icon/js-icon.png";
-import ReactIcon from "/public/tech-icon/react-icon.png";
-import PostgreIcon from "/public/tech-icon/postgre-icon.png";
-import GitIcon from "/public/tech-icon/git-icon.png";
-import GithubIcon from "/public/tech-icon/github-icon.png";
-import VScodeIcon from "/public/tech-icon/vscode-icon.png";
-import FigmaIcon from "/public/tech-icon/figma-icon.png";
-import NotionIcon from "/public/tech-icon/notion-icon.png";
-import PostmanIcon from "/public/tech-icon/postman-icon.png";
+import { interests, technologies } from "../../utils/aboutMe";
 
-function TechLists() {
+function SkillLists() {
+  const categoryTitles = {
+    "language&framework": "Language & Framework",
+    "database&tools": "Database & Tools",
+  };
+
+  // Mengambil daftar kategori unik secara otomatis
+  const categories = Object.keys(categoryTitles);
+
   return(
-    <div className="techLists">
-      <div className="tech">
-        <img src={HtmlIcon} alt="Logo HTML" />
+    <div className="skills">
+      <div className="interestItems">
+        <h3>Interests</h3>
+        <div className="interestLists">
+          {interests.map((interest, index) => (
+            <div className="interest" key={index}>
+              <p>{interest.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="tech">
-        <img src={CssIcon} alt="Logo CSS" />
-      </div>
-      <div className="tech">
-        <img src={SassIcon} alt="Logo SASS" />
-      </div>
-      <div className="tech">
-        <img src={JsIcon} alt="Logo JavaScript" />
-      </div>
-      <div className="tech">
-        <img src={ReactIcon} alt="Logo React" />
-      </div>
-      <div className="tech">
-        <img src={PostgreIcon} alt="Logo PostgreSQL" />
-      </div>
-      <div className="tech">
-        <img src={GitIcon} alt="Logo Git" />
-      </div>
-      <div className="tech">
-        <img src={GithubIcon} alt="Logo GitHub" />
-      </div>
-      <div className="tech">
-        <img src={VScodeIcon} alt="Logo Visual Studio Code" />
-      </div>
-      <div className="tech">
-        <img src={FigmaIcon} alt="Logo Figma" />
-      </div>
-      <div className="tech">
-        <img src={PostmanIcon} alt="Logo Postman" />
-      </div>
-      <div className="tech">
-        <img src={NotionIcon} alt="Logo Notion" />
-      </div>
+      {categories.map((category) => (
+        <div className="techItems" key={category}>
+          <h3>{categoryTitles[category]}</h3>
+          <div className="techLists">
+            {technologies
+              .filter((tech) => tech.category === category)
+              .map((technology) => (
+                <div className="tech" key={technology.name}>
+                  <img src={technology.icon} alt={technology.name} />
+                </div>
+              ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
 
-export default TechLists;
+export default SkillLists;
