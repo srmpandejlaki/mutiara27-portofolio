@@ -23,7 +23,7 @@ const projects = [
     role: "Full-Stack Developer",
     team: "1 Person",
     tech: "HTML, SCSS, ReactJS, ExpressJS, PostgreSQL",
-    link: "https://mutiara47-portofolio.vercel.app/dashboard"
+    link: "https://mutiara47-portofolio.vercel.app/home"
   }
 ];
 

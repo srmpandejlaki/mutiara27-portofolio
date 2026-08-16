@@ -7,7 +7,7 @@ import ProjectSection from "../../components/dashboard/projectSection";
 function DashboardPage() {
   return (
     <div>
-      <div id="dashboard" className="container">
+      <div id="homeSection" className="container">
         <HeroSection />
         <AboutSection />
         <ProjectSection />

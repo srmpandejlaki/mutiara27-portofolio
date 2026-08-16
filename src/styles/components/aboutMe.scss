@@ -4,14 +4,14 @@
   padding: 3rem 1rem;
 }
 
-.techContainer {
-  padding-block: 2rem;
+.interestItems, .techItems {
+  padding-block: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem;
 
   h3 {
-    text-align: center;
+    font-size: 1rem;
   }
 
   img {
@@ -26,12 +26,28 @@
     }
   }
 
-  .techLists {
+  .interestLists, .techLists {
     display: flex;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     gap: 1.5rem;
     flex-wrap: wrap;
+  }
+}
+
+.interest {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  
+  &:not(:last-child)::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: main.$font-color2; /* Warna lingkaran */
+    display: inline-block;
   }
 }
 
