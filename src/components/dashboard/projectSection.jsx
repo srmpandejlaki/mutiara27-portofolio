@@ -51,7 +51,7 @@ function ProjectSection() {
   };
 
   return(
-    <section className="projects-section">
+    <section className="projects-section" id="projectsSection">
       <h1>PROJECTS</h1>
       <p>These are some of the projects I've worked on.</p>
 
