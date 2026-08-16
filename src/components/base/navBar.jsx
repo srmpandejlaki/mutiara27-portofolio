@@ -29,7 +29,11 @@ function NavigationBar({ handleCloseNav }) {
         >
           <i className="fa-solid fa-user"></i>About
         </button>
-        {/* <NavLink to="/blog">Blog</NavLink> */}
+        <button 
+          onClick={() => scrollToSection("projectSection")} 
+        >
+          <i className="fa-solid fa-briefcase"></i>Projects
+        </button>
       </div>
       <div className="nav-footer">
         <IconLink />

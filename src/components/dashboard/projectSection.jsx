@@ -16,12 +16,19 @@ function ProjectSection() {
     }
   }, []);
 
-  // Auto-scroll setiap 5 detik
+  // Auto-scroll setiap 5 detik HANYA JIKA total halaman/slide > 1
   const startAutoScroll = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
+
+    const isDesktop = window.innerWidth >= 650;
+    const itemsPerPage = isDesktop ? 2 : 1;
+    const totalSlides = Math.ceil(projects.length / itemsPerPage);
+
+    if (totalSlides <= 1) return;
+
     intervalRef.current = setInterval(() => {
       setCurrent((prev) => {
-        const next = (prev + 1) % projects.length;
+        const next = (prev + 1) % totalSlides;
         scrollToSlide(next);
         return next;
       });
@@ -30,7 +37,16 @@ function ProjectSection() {
 
   useEffect(() => {
     startAutoScroll();
-    return () => clearInterval(intervalRef.current);
+
+    const handleResize = () => {
+      startAutoScroll();
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      clearInterval(intervalRef.current);
+      window.removeEventListener("resize", handleResize);
+    };
   }, [startAutoScroll]);
 
   // Sync current index saat user scroll manual
@@ -51,7 +67,7 @@ function ProjectSection() {
   };
 
   return(
-    <section className="projects-section" id="projectsSection">
+    <section className="projects-section" id="projectSection">
       <h1>PROJECTS</h1>
       <p>These are some of the projects I've worked on.</p>
 
@@ -62,8 +78,13 @@ function ProjectSection() {
       >
         {projects.map((project) => (
           <div key={project.id} className="project-items review">
-            <img className="img-item" src={project.image} onClick={() => setShowOverlay(project)} alt={project.alt} />
-            <p>{project.name}<br/>{project.description}</p>
+            <div className="project-img-wrapper">
+              <img className="img-item" src={project.image} onClick={() => setShowOverlay(project)} alt={project.alt} />
+            </div>
+            <div className="project-info">
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+            </div>
           </div>
         ))}
       </div>
