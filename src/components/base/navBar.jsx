@@ -30,6 +30,11 @@ function NavigationBar({ handleCloseNav }) {
           <i className="fa-solid fa-user"></i>About
         </button>
         <button 
+          onClick={() => scrollToSection("journeySection")} 
+        >
+          <i className="fa-solid fa-graduation-cap"></i>Journey
+        </button>
+        <button 
           onClick={() => scrollToSection("projectSection")} 
         >
           <i className="fa-solid fa-briefcase"></i>Projects
