@@ -67,15 +67,20 @@ const experiences = [
   {
     company: "PT. Rumah Seho Nusantara",
     desc: "Production Line Intern",
-    detail: "Full-Stack Developer",
     time: "Jun 2025 - Sept 2025",
     link: "https://www.instagram.com/rsn_indonesia/",
     logo: "/logo/logo-rsn.png"
   },
   {
-    company: "Dicoding",
-    desc: "Bootcamp",
-    detail: "Batch 3 - Front-End & Back-End Web Developer",
+    company: "Service Learning Student Fellowship",
+    desc: "Service Learning Program in Cebu City, Phillipines",
+    time: "3rd Aug - 11th Aug 2025",
+    link: "https://www.uniservitate.org/",
+    logo: "/logo/logo-uniservitate.jpe"
+  },
+  {
+    company: "Dicoding Bootcamp",
+    desc: "Batch 3 - Front-End & Back-End Web Developer",
     time: "Aug 2024 - Jan 2025",
     link: "https://www.dicoding.com/",
     logo: "/logo/logo-dicoding.png"

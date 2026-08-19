@@ -81,6 +81,12 @@ function App() {
               <i className="fa-solid fa-user"></i>About
             </button>
             <button 
+              onClick={() => scrollToSection("journeySection")} 
+              className={activeSection === "journeySection" ? "active" : ""}
+            >
+              <i className="fa-solid fa-road"></i>Journey
+            </button>
+            <button 
               onClick={() => scrollToSection("projectSection")} 
               className={activeSection === "projectSection" ? "active" : ""}
             >

@@ -44,6 +44,10 @@
   .heroContent {
     flex-direction: column;
   }
+
+  .aboutMe-section, .journey-section {
+    padding-inline: 2rem;
+  }
 }
 
 @media screen and (min-width: 580px) {

@@ -30,6 +30,7 @@ function JourneySection() {
                 <div className="desc">
                   <a href={experience.link} className="bold">{experience.company}</a>
                   <p>{experience.desc}</p>
+                  <p>{experience.detail}</p>
                   <p>{experience.time}</p>
                 </div>
               </div>
