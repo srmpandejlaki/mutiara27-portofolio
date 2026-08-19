@@ -25,6 +25,7 @@ function AboutSection() {
         <p>Connect with me</p>
         <IconLink />
       </div>
+      <div className="line"></div>
     </section>
   );
 }

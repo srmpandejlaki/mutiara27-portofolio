@@ -3,7 +3,6 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import { NavLink } from "react-router-dom";
 
 import DashboardPage from './pages/DashboardPage';
-import AboutMePage from './pages/AboutMePage';
 
 import NavigationBar from '../components/base/navBar';
 import FooterSection from '../components/base/footerr';
@@ -95,8 +94,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Navigate to="/home" />}></Route>
           <Route path='/home' element={<DashboardPage />}></Route>
-          <Route path='/about-me' element={<AboutMePage />}></Route>
-          <Route path='/blog' element={<DashboardPage />}></Route>
         </Routes>
       </main>
 

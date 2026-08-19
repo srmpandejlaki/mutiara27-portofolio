@@ -63,4 +63,40 @@ const technologies = [
   }
 ];
 
-export { interests, technologies };
+const experiences = [
+  {
+    company: "PT. Rumah Seho Nusantara",
+    desc: "Production Line Intern",
+    detail: "Full-Stack Developer",
+    time: "Jun 2025 - Sept 2025",
+    link: "https://www.instagram.com/rsn_indonesia/",
+    logo: "/logo/logo-rsn.png"
+  },
+  {
+    company: "Dicoding",
+    desc: "Bootcamp",
+    detail: "Batch 3 - Front-End & Back-End Web Developer",
+    time: "Aug 2024 - Jan 2025",
+    link: "https://www.dicoding.com/",
+    logo: "/logo/logo-dicoding.png"
+  }
+];
+
+const educations = [
+  {
+    school: "University of Catholic De La Salle Manado, Indonesia",
+    degree: "Informatics Engineering",
+    time: "2022 - Present",
+    link: "https://unikadelasalle.ac.id/",
+    logo: "/logo/logo-delasalle.png"
+  },
+  {
+    school: "Karitas Catholic Senior High School Tomohon, Indonesia",
+    degree: "Science",
+    time: "2019 - 2022",
+    link: "https://www.instagram.com/smakaritas_tomohon/",
+    logo: "/logo/logo-karitas.png"
+  }
+];
+
+export { interests, technologies, experiences, educations };
