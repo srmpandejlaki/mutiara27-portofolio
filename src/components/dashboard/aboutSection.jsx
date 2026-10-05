@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import IconLink from "../../components/base/iconLink";
-import ProfilePict from "/public/character-blue-white.png";
+import ProfilePict from "/public/profile-photo.jpg";
 import SkillLists from "../../components/aboutMe/technologies";
 import FadeIn from "../animation/FadeIn";
 
