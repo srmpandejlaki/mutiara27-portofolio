@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import projects from "../../utils/projects";
+import FadeIn from "../animation/FadeIn";
 
 function ProjectSection() {
   const [showOverlay, setShowOverlay] = useState(null);
@@ -68,55 +69,57 @@ function ProjectSection() {
 
   return(
     <section className="projects-section" id="projectSection">
-      <div className="project-header">
-        <h1>PROJECTS</h1>
-        <p>These are some of the projects I've worked on.</p>
-      </div>
-
-      <div 
-        className="projectContainer"
-        ref={containerRef}
-        onScroll={handleScroll}
-      >
-        {projects.map((project, index) => (
-          <div key={index} className="project-items review" onClick={() => setShowOverlay(project)} >
-            <div className="project-img-wrapper">
-              <img className="img-item" src={project.image} alt={project.alt} />
-            </div>
-            <div className="project-info">
-              <h3>{project.name}</h3>
-              <p>{project.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {showOverlay && (
-        <div className="overlay">
-          <i className="fa-solid fa-xmark closeBtn" onClick={handleCloseOverlay}></i>
-          <div className="project-content">
-            <div className="project-images">
-              <img className="img-mac" src={showOverlay.detailImage} alt={showOverlay.alt} />
-            </div>
-            <div className="overlay-desc">
-              <h2>{showOverlay.name}</h2>
-              <h2>{showOverlay.description}</h2>
-              <p>{showOverlay.details}</p>
-              <div className="roleTeam">
-                <p>
-                  <span>Role</span><br/>{showOverlay.role}</p>
-                <p>
-                  <span>Team</span><br/>{showOverlay.team}</p>
-              </div>
-              <p>
-                <span>Tech</span><br/>{showOverlay.tech}</p>
-              <a href={showOverlay.link} target="_blank" rel="noopener noreferrer">
-                visit website
-              </a>
-            </div>
-          </div>
+      <FadeIn delay={0.2} duration={1}>
+        <div className="project-header">
+          <h1>PROJECTS</h1>
+          <p>These are some of the projects I've worked on.</p>
         </div>
-      )}
+
+        <div 
+          className="projectContainer"
+          ref={containerRef}
+          onScroll={handleScroll}
+        >
+          {projects.map((project, index) => (
+            <div key={index} className="project-items review" onClick={() => setShowOverlay(project)} >
+              <div className="project-img-wrapper">
+                <img className="img-item" src={project.image} alt={project.alt} />
+              </div>
+              <div className="project-info">
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {showOverlay && (
+          <div className="overlay">
+            <i className="fa-solid fa-xmark closeBtn" onClick={handleCloseOverlay}></i>
+            <div className="project-content">
+              <div className="project-images">
+                <img className="img-mac" src={showOverlay.detailImage} alt={showOverlay.alt} />
+              </div>
+              <div className="overlay-desc">
+                <h2>{showOverlay.name}</h2>
+                <h2>{showOverlay.description}</h2>
+                <p>{showOverlay.details}</p>
+                <div className="roleTeam">
+                  <p>
+                    <span>Role</span><br/>{showOverlay.role}</p>
+                  <p>
+                    <span>Team</span><br/>{showOverlay.team}</p>
+                </div>
+                <p>
+                  <span>Tech</span><br/>{showOverlay.tech}</p>
+                <a href={showOverlay.link} target="_blank" rel="noopener noreferrer">
+                  visit website
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
+      </FadeIn>
     </section>
   );
 }
