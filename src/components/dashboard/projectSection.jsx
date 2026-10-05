@@ -68,18 +68,20 @@ function ProjectSection() {
 
   return(
     <section className="projects-section" id="projectSection">
-      <h1>PROJECTS</h1>
-      <p>These are some of the projects I've worked on.</p>
+      <div className="project-header">
+        <h1>PROJECTS</h1>
+        <p>These are some of the projects I've worked on.</p>
+      </div>
 
       <div 
         className="projectContainer"
         ref={containerRef}
         onScroll={handleScroll}
       >
-        {projects.map((project) => (
-          <div key={project.id} className="project-items review">
+        {projects.map((project, index) => (
+          <div key={index} className="project-items review" onClick={() => setShowOverlay(project)} >
             <div className="project-img-wrapper">
-              <img className="img-item" src={project.image} onClick={() => setShowOverlay(project)} alt={project.alt} />
+              <img className="img-item" src={project.image} alt={project.alt} />
             </div>
             <div className="project-info">
               <h3>{project.name}</h3>

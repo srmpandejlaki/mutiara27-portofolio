@@ -15,7 +15,7 @@ function AboutSection() {
         </div>
         <div className="desc">
           <p>
-            Hi, I'm a final-year Informatics Engineering student from Indonesia 
+            Hi, I'm a Fresh Graduate Informatics Engineering Student from Indonesia 
             with a strong interest in web development.
           </p>
           <SkillLists />
