@@ -91,7 +91,7 @@ const educations = [
   {
     school: "University of Catholic De La Salle Manado, Indonesia",
     degree: "Informatics Engineering",
-    time: "2022 - Present",
+    time: "2022 - 2026",
     link: "https://unikadelasalle.ac.id/",
     logo: "/logo/logo-delasalle.png"
   },
